@@ -19,5 +19,9 @@ func fizzbuzz(n int) string {
 		resultado = "Fizz"
 	}
 
+	if n%5 == 0 {
+		resultado += "Buzz"
+	}
+
 	return resultado
 }
