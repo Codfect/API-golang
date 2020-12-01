@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strconv"
+)
 
 func main() {
 	fmt.Println("Escre um número inteiro:")
@@ -14,6 +17,7 @@ func main() {
 
 func fizzbuzz(n int) string {
 	var resultado string
+	var str = strconv.Itoa(n)
 	//Fizz = 3 * n
 	if n%3 == 0 {
 		resultado = "Fizz"
@@ -21,6 +25,10 @@ func fizzbuzz(n int) string {
 
 	if n%5 == 0 {
 		resultado += "Buzz"
+	}
+
+	if len(resultado) == 0 {
+		resultado = str
 	}
 
 	return resultado
